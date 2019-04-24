@@ -1,0 +1,31 @@
+/*A program to create a structure book and pass the structure as function argument and print the book details*/
+
+#include<stdio.h>
+struct book
+{
+	int b_id;
+	char title[50];
+	char a_name[50];
+	char place[30];
+};
+void print(struct book b1)
+{
+	printf("\nBook id : %d\n",b1.b_id);
+	printf("Title : %s\n",b1.title);
+	printf("Author : %s\n",b1.a_name);
+	printf("Place : %s\n",b1.place);
+}
+void main()
+{
+	struct book b1;
+	printf("Enter the book id : ");
+	scanf("%d",&b1.b_id);
+	printf("Enter the title of the book : ");
+	scanf("%s",b1.title);
+	printf("Enter the author name : ");
+	scanf("%s",b1.a_name);
+	printf("Enter the place : ");
+	scanf("%s",b1.place);
+	print(b1);
+}
+	
