@@ -33,11 +33,52 @@ void main()
    med=((nq+m)/2.0);
    printf("\nMedian is %f ",med);}
  else
-  printf("\nMedian is %d ",a[(n/2)]); 
+  printf("\n\nMedian is %d\n\n",a[(n/2)]); 
   
  
   
- }  
+   
+ int occ[20],nos[20]; 
+ int k,c,q=0,flag;
+   
+ for(i=0;i<n;i++)
+ {
+  c=0;
+  flag=1;
+  for(k=0;k<i;k++)
+   {if(a[i]==a[k])
+     flag=0;}
+  if(flag!=0)
+  {   
+   for(j=i;j<n;j++) 
+     if (a[i]==a[j])
+       c++;
+   occ[q]=c;
+   nos[q]=a[i];
+   q=q+1;
+  }
+  
+  }
+  
+  
+   
+  printf("Mod - ");
+  big = occ[0];
+  for(i=1;i<q;i++)
+   if(big<occ[i])
+       big=occ[i];
+  
+  for(i=0;i<q;i++) 
+      if(big==occ[i])
+         printf("%d,",nos[i]);
+         
+   printf("\n");
+         
+         
+}
+       
+    
+   
  
   
   
