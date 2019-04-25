@@ -1,6 +1,7 @@
 /*A program to create a structure book and pass the structure as function argument and print the book details*/
 
 #include<stdio.h>
+#include <string.h>
 struct book
 {
 	int b_id;
@@ -13,19 +14,19 @@ void print(struct book b1)
 	printf("\nBook id : %d\n",b1.b_id);
 	printf("Title : %s\n",b1.title);
 	printf("Author : %s\n",b1.a_name);
-	printf("Place : %s\n",b1.place);
+	
 }
 void main()
 {
 	struct book b1;
+	char str[20];
 	printf("Enter the book id : ");
 	scanf("%d",&b1.b_id);
-	printf("Enter the title of the book : ");
-	scanf("%s",b1.title);
-	printf("Enter the author name : ");
-	scanf("%s",b1.a_name);
-	printf("Enter the place : ");
-	scanf("%s",b1.place);
+	gets(str);
+	printf("Enter the author : ");
+	gets(b1.a_name);
+	printf("Enter the title : ");
+	gets(b1.title);
 	print(b1);
 }
 	
